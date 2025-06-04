@@ -33,23 +33,19 @@ Both **1D** and **2D goalpost environments** are explored, and goalkeeper skill 
 - Kicker aims at a point `x` ∈ `[0, 20]`.
 - Goalkeeper chooses from `{Left, Middle, Right}`.
 - **Reward Function**:  
-![Equation](https://latex.codecogs.com/png.image?\dpi{120} f(x)=\beta\cdot x^\alpha \cdot e^{-\gamma x})
+`f(x) = β · x^α · e^(–γx)`)
 
 
 ### ✅ 2D Model
 - Goalpost defined on the `xy`-plane: `[0,10] x [0,10]`.
 - Four target zones: UL, UR, BL, BR.
-- **Reward Function**:  
-`f(x) = β · x^α · e^(–γx)`
+- **Reward Function**:   
+`f(x, y) = α · e^(–(βx² + γxy + δy²))`
 
 
 ### ✅ Game-Theoretic Strategy
 - Models Kicker vs Goalkeeper as a **2-player zero-sum game**.
 - Optimal mixed strategies derived analytically:
-  \[
-  x_i = \frac{1/p_i}{\sum 1/p_j}
-  \]
-
 ---
 
 ## 🧪 Experiments
@@ -64,27 +60,6 @@ Both **1D** and **2D goalpost environments** are explored, and goalkeeper skill 
   - Kicker strategy **varies per goalkeeper**.
   - No universal best region; players tend to spread shots **uniformly**.
 
----
-
-## 📁 Project Structure
-
-\`\`\`bash
-penalty-kick-strategy/
-├── data/                      # Preprocessed FIFA dataset
-├── models/                    # Trained RL models
-├── environments/
-│   ├── kicker_env_1d.py       # 1D goalpost simulation
-│   └── kicker_env_2d.py       # 2D goalpost simulation
-├── analysis/
-│   ├── heatmaps.py            # Visualization scripts
-│   └── mixed_strategy_solver.py
-├── results/
-│   └── figures/               # Heatmaps and probability graphs
-├── paper/                     # Research paper PDF
-└── README.md
-\`\`\`
-
----
 
 ## 📦 Dataset
 
