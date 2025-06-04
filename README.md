@@ -40,9 +40,8 @@ Both **1D** and **2D goalpost environments** are explored, and goalkeeper skill 
 - Goalpost defined on the `xy`-plane: `[0,10] x [0,10]`.
 - Four target zones: UL, UR, BL, BR.
 - **Reward Function**:  
-  \[
-  f(x, y) = \alpha \cdot e^{-(\beta x^2 + \gamma xy + \delta y^2)}
-  \]
+`f(x) = β · x^α · e^(–γx)`
+
 
 ### ✅ Game-Theoretic Strategy
 - Models Kicker vs Goalkeeper as a **2-player zero-sum game**.
