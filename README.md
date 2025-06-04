@@ -33,9 +33,8 @@ Both **1D** and **2D goalpost environments** are explored, and goalkeeper skill 
 - Kicker aims at a point `x` ∈ `[0, 20]`.
 - Goalkeeper chooses from `{Left, Middle, Right}`.
 - **Reward Function**:  
-  \[
-  f(x) = \beta \cdot x^\alpha \cdot e^{- \gamma x}
-  \]
+![Equation](https://latex.codecogs.com/png.image?\dpi{120} f(x)=\beta\cdot x^\alpha \cdot e^{-\gamma x})
+
 
 ### ✅ 2D Model
 - Goalpost defined on the `xy`-plane: `[0,10] x [0,10]`.
